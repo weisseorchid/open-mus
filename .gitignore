@@ -1,0 +1,11 @@
+# Ignore all files in the .env directory
+.env/
+
+# Ignore all files in the .env.local directory
+.env.local/
+
+# Ignore all files in the .env.development.local directory
+.env.development.local/
+
+# Ignore all files in the .env.test.local directory
+.env.test.local/
