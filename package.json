@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "echo 'Node version:' && node -v && echo 'Yarn version:' && yarn -v && tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "start": "vite preview",
     "preinstall": "node -v"
   },
   "dependencies": {
