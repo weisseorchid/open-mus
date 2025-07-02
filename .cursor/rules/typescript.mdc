@@ -17,6 +17,7 @@ globs: **/*.ts, **/*.tsx, **/*.d.ts
 - Use strict TypeScript configuration
 - Leverage TypeScript's built-in utility types
 - Use generics for reusable type patterns
+- Use yarn as package manager
 
 ## Naming Conventions
 - Use PascalCase for type names and interfaces
