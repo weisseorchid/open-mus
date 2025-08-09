@@ -1,68 +1,420 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Cinematic Dark Theme */
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 84% 5%;
+
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 213 27% 84%;
+
+    --radius: 1rem;
+
+    /* Cinematic color palette */
+    --cinematic-dark: 222 84% 5%;
+    --cinematic-darker: 220 100% 2%;
+    --cinematic-amber: 45 100% 70%;
+    --cinematic-amber-warm: 35 100% 65%;
+    --cinematic-overlay: 0 0% 0%;
+    
+    /* Gradients */
+    --gradient-cinematic: linear-gradient(135deg, hsl(220 29% 11%) 0%, hsl(220 100% 2%) 100%);
+    --gradient-amber: linear-gradient(135deg, hsl(45 100% 70% / 0.1) 0%, hsl(35 100% 65% / 0.05) 100%);
+    
+    /* Shadows */
+    --shadow-cinematic: 0 25px 50px -12px hsl(220 100% 2% / 0.8);
+    --shadow-amber-glow: 0 0 40px hsl(45 100% 70% / 0.2);
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222 84% 5%;
+    --sidebar-accent: 217 32% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 213 27% 84%;
   }
-  a:hover {
-    color: #747bff;
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Removed global margins for headings and paragraphs to avoid layout side effects. */
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+}
+
+/* Custom animations for enhanced visual polish */
+@layer utilities {
+  /* Stack utility - responsive spacing via data attributes and CSS variables */
+  .stack {
+    display: flex;
+    row-gap: var(--stack-gap-y, 0px);
+    column-gap: var(--stack-gap-x, 0px);
+  }
+
+  .stack[data-direction="col"] { flex-direction: column; }
+  .stack[data-direction="row"] { flex-direction: row; }
+  .stack[data-wrap="true"] { flex-wrap: wrap; }
+
+  /* Base spacing (mobile-first) */
+  .stack[data-space="none"] { --stack-gap-y: 0rem; --stack-gap-x: 0rem; }
+  .stack[data-space="xs"] { --stack-gap-y: 0.0325rem; --stack-gap-x: 0.0325rem; }
+  .stack[data-space="sm"] { --stack-gap-y: 0.0625rem; --stack-gap-x: 0.0625rem; }
+  .stack[data-space="md"] { --stack-gap-y: 0.5rem; --stack-gap-x: 0.5rem; }
+  .stack[data-space="lg"] { --stack-gap-y: 1rem; --stack-gap-x: 1rem; }
+  .stack[data-space="xl"] { --stack-gap-y: 2rem; --stack-gap-x: 2rem; }
+  .stack[data-space="xxl"] { --stack-gap-y: 4rem; --stack-gap-x: 4rem; }
+
+  /* sm breakpoint */
+  @media (min-width: 640px) {
+    .stack[data-space="none"] { --stack-gap-y: 0rem; --stack-gap-x: 0rem; }
+    .stack[data-space="xs"] { --stack-gap-y: 0.0325rem; --stack-gap-x: 0.0325rem; }
+    .stack[data-space="sm"] { --stack-gap-y: 0.0625rem; --stack-gap-x: 0.0625rem; }
+    .stack[data-space="md"] { --stack-gap-y: 0.5rem; --stack-gap-x: 0.5rem; }
+    .stack[data-space="lg"] { --stack-gap-y: 1rem; --stack-gap-x: 1rem; }
+    .stack[data-space="xl"] { --stack-gap-y: 2rem; --stack-gap-x: 2rem; }
+    .stack[data-space="xxl"] { --stack-gap-y: 4rem; --stack-gap-x: 4rem; }
+  }
+
+  /* md breakpoint */
+  @media (min-width: 768px) {
+    .stack[data-space="none"] { --stack-gap-y: 0rem; --stack-gap-x: 0rem; }
+    .stack[data-space="xs"] { --stack-gap-y: 0.0325rem; --stack-gap-x: 0.0325rem; }
+    .stack[data-space="sm"] { --stack-gap-y: 0.0625rem; --stack-gap-x: 0.0625rem; }
+    .stack[data-space="md"] { --stack-gap-y: 0.5rem; --stack-gap-x: 0.5rem; }
+    .stack[data-space="lg"] { --stack-gap-y: 1rem; --stack-gap-x: 1rem; }
+    .stack[data-space="xl"] { --stack-gap-y: 2rem; --stack-gap-x: 2rem; }
+    .stack[data-space="xxl"] { --stack-gap-y: 4rem; --stack-gap-x: 4rem; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+  
+  /* Responsive background image that crops instead of scaling */
+  .responsive-bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* Ensure proper aspect ratio maintenance */
+    min-height: 100vh;
+    min-width: 100vw;
+    
+    /* Better cropping behavior on different screen sizes */
+    @media (max-aspect-ratio: 16/9) {
+      background-position: center top;
+    }
+    
+    @media (min-aspect-ratio: 21/9) {
+      background-position: center center;
+    }
+    
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+      background-position: center 30%;
+    }
+    
+    /* Tablet optimization */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      background-position: center 40%;
+    }
+    
+    /* Desktop optimization */
+    @media (min-width: 1025px) {
+      background-position: center center;
+    }
+  }
+  
+  /* Adaptive Typography System */
+  .adaptive-heading {
+    /* Mobile: 320px - 480px */
+    font-size: 1.8rem; /* 28.8px - reduced from 36px */
+    line-height: 0.75;
+    
+    @media (min-width: 375px) and (max-width: 480px) {
+      font-size: 2.2rem; /* 35.2px - reduced from 44px */
+    }
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 2.8rem; /* 44.8px - reduced from 56px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 3.6rem; /* 57.6px - reduced from 72px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 4.4rem; /* 70.4px - reduced from 88px */
+    }
+    
+    @media (min-width: 1280px) {
+      font-size: 5.2rem; /* 83.2px - reduced from 104px */
+    }
+    
+    @media (min-width: 1536px) {
+      font-size: 6rem; /* 96px - reduced from 120px */
+    }
+  }
+  
+  .adaptive-tagline {
+    /* Mobile: 320px - 480px */
+    font-size: 0.6rem; /* 9.6px - reduced from 12px */
+    
+    @media (min-width: 375px) and (max-width: 480px) {
+      font-size: 0.7rem; /* 11.2px - reduced from 14px */
+    }
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 0.9rem; /* 14.4px - reduced from 18px */
+    }
+  }
+  
+  .adaptive-description {
+    /* Mobile: 320px - 480px */
+    font-size: 0.7rem; /* 11.2px - reduced from 14px */
+    
+    @media (min-width: 375px) and (max-width: 480px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+    }
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 0.9rem; /* 14.4px - reduced from 18px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 1rem; /* 16px - reduced from 20px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 1.1rem; /* 17.6px - reduced from 22px */
+    }
+    
+    @media (min-width: 1280px) {
+      font-size: 1.2rem; /* 19.2px - reduced from 24px */
+    }
+  }
+  
+  .adaptive-logo {
+    /* Mobile: 320px - 480px */
+    font-size: 0.9rem; /* 14.4px - reduced from 18px */
+    
+    @media (min-width: 375px) and (max-width: 480px) {
+      font-size: 1rem; /* 16px - reduced from 20px */
+    }
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 1.2rem; /* 19.2px - reduced from 24px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 1.4rem; /* 22.4px - reduced from 28px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 1.6rem; /* 25.6px - reduced from 32px */
+    }
+  }
+  
+  .adaptive-nav-links {
+    /* Mobile: hidden by default */
+    font-size: 0.7rem; /* 11.2px - reduced from 14px */
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 0.7rem; /* 11.2px - reduced from 14px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 0.9rem; /* 14.4px - reduced from 18px */
+    }
+  }
+  
+  .adaptive-button {
+    /* Mobile: 320px - 480px */
+    font-size: 0.6rem; /* 9.6px - reduced from 12px */
+    padding: 0.5rem 1rem; /* 8px 16px */
+    
+    @media (min-width: 375px) and (max-width: 480px) {
+      font-size: 0.7rem; /* 11.2px - reduced from 14px */
+      padding: 0.625rem 1.25rem; /* 10px 20px */
+    }
+    
+    /* Tablet: 481px - 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: 0.7rem; /* 11.2px - reduced from 14px */
+      padding: 0.75rem 1.5rem; /* 12px 24px */
+    }
+    
+    /* Desktop: 769px and up */
+    @media (min-width: 769px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+      padding: 0.75rem 2rem; /* 12px 32px */
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 0.8rem; /* 12.8px - reduced from 16px */
+      padding: 0.875rem 2.25rem; /* 14px 36px */
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
