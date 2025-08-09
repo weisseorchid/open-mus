@@ -68,10 +68,10 @@ const Hero = () => {
             ¿Preparado para echar un órdago?
           </p>
           <h1 className="adaptive-heading font-light">
-            <span className="text-white animate-fade-in-up">
+            <span className="block text-white/80 font-bold animate-fade-in-up">
               Para ganar a lo grande...
             </span>
-            <span className="block text-red-500/80 animate-fade-in-up">
+            <span className="block text-white/80 font-bold animate-fade-in-up">
               Tienes que estar dispuesto a jugártelo todo
             </span>
           </h1>
