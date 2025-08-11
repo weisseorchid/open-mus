@@ -5,6 +5,7 @@ import { lazy } from 'react';
 const Index = lazy(() => import('@/pages/Index'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 const Onboarding = lazy(() => import('@/pages/Onboarding'));
+const Rules = lazy(() => import('@/pages/support/Rules'));
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Index /> },
       { path: 'onboarding', element: <Onboarding /> },
+      { path: 'rules', element: <Rules /> },
       { path: '*', element: <NotFound /> },
     ],
   },

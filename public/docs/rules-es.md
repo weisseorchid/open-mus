@@ -2,7 +2,7 @@
 
 El mus es un juego de cartas para cuatro personas que se agrupan en dos parejas.
 
-## Objetivo del juego
+## 🎯 Objetivo del juego
 
 El objetivo es ganar la partida a la pareja rival. Para ello, la pareja debe ganar una serie de **"vacas"**. Para ganar cada vaca es necesario ganar un número determinado de **"juegos"**, siendo lo normal jugar cada vaca al **"mejor de 3"** (el primero que gana dos juegos, se apunta la vaca). Cada juego está compuesto por un número determinado de **"piedras"**.
 
@@ -10,7 +10,7 @@ El objetivo es ganar la partida a la pareja rival. Para ello, la pareja debe gan
 
 ---
 
-## Reparto y descarte
+## 🃏 Reparto y descarte
 
 Después de repartir cuatro cartas a cada jugador de una en una, cada jugador en orden, comenzando por el **mano**, dice si quiere **"mus"** (quiere descartarse de alguna carta o de todas), o **"no mus"** (está conforme con las cartas que tiene y no quiere descartarse de ninguna). Para que haya mus, todos los jugadores deben querer mus.
 
@@ -20,7 +20,7 @@ Si se acaban las cartas y todavía faltaran cartas por dar, se cogen las cartas 
 
 ---
 
-## Corte del mus
+## 🖐️ Corte del mus
 
 Si algún jugador no quiere mus, inmediatamente se corta la ronda de mus y se pasa directamente a jugar, puesto que es necesario que todos los jugadores quieran mus para que haya descartes. Esto ya permite tener una pista sobre si una pareja (suponiendo que no haga un farol) tiene buenas cartas (corta el mus) o no son tan buenas (quiere mus). El primer jugador en hablar es siempre el **mano**, independientemente de qué jugador corte el mus.
 
@@ -30,7 +30,7 @@ El jugador puede consultar con su compañero antes de decidir si pide mus, pero 
 
 ---
 
-## Lances del juego
+## ⚔️ Lances del juego
 
 Una vez que se corta el mus, se comienza a jugar cada uno de los cuatro **lances** de los que consta el juego:
 
@@ -64,7 +64,7 @@ Hay que tener en cuenta que, con independencia de cuál haya sido el jugador que
 
 ---
 
-## Órdago
+## 🧨 Órdago
 
 Cuando un jugador dice **órdago**, está apostando para llevarse el juego entero. Si se acepta, el jugador que gane esa apuesta ganaría el juego independientemente del marcador de piedras.
 
@@ -78,27 +78,28 @@ También hay que tener en cuenta que, aunque un jugador se apueste todas las pie
 
 ---
 
-## Descripción de los lances
+## 🤼 Descripción de los lances
+El orden de los lances es importante para el reparto final de los amarracos en función de la acción tomada. 
 
-### Grande
+### 🦍 Grande
 
 Es el primer lance del juego. Gana la pareja que tiene las cartas de mayor valor.  
 Las cartas de mayor valor son los **reyes** (como jugamos a 8 reyes, los treses cuentan a todos los efectos como reyes), seguidos de **caballos**, **sotas**, **sietes**, **seises**, **cincos**, **cuatros** y **ases** (como jugamos a 8 ases, los doses cuentan a todos los efectos como ases).  
 La combinación de cartas es la que tenga cada jugador en la mano (no se combinan las cartas de la pareja). Para saber quién tiene mejor jugada, se cuenta los reyes que cada uno tiene. Si hay empate, los caballos; si hay empate, las sotas... Gana la pareja del jugador que tiene las cartas más altas.
 
-### Pequeña
+### 🦎 Pequeña
 
 Es el segundo lance del juego. Gana la pareja que tiene las cartas de menor valor.  
 Las cartas de menor valor son los **ases** (como jugamos a 8 ases, los doses cuentan a todos los efectos como ases), seguidos de **cuatros**, **cincos**, **seises**, **sietes**, **sotas**, **caballos** y **reyes** (como jugamos a 8 reyes, los treses cuentan a todos los efectos como reyes).  
 La combinación de cartas es la que tenga cada jugador en la mano (no se combinan las cartas de la pareja). Para saber quién tiene mejor jugada, se cuenta los ases que cada uno tiene. Si hay empate, los cuatros; si hay empate, los cincos... Gana la pareja del jugador que tiene las cartas más bajas.
 
-### Pares
+### 🐾 Pares
 
 Es el tercer lance del juego. En una primera ronda, cada jugador, empezando por la mano, comunica si tiene pares (dos o más cartas iguales) o no. No se puede mentir en esta comunicación. La "mano" dice "tengo pares" o "no tengo pares" y el resto de jugadores continúan con "sí" o "no". Si ningún jugador tiene pares o sólo uno de los jugadores tiene pares, se pasa directamente al siguiente lance del juego sin envites.
 
 Gana la pareja con mejores pares. Los mejores pares son los **"duples"** (tener dos parejas o cuatro cartas iguales), le siguen las **"medias"** (tres cartas iguales y una distinta) y por último, la **pareja** (dos cartas iguales y dos distintas). Si se empata a pares, se tiene en cuenta el valor de las cartas que forman los pares, ganando las cartas más altas. Así, una pareja de reyes vale más que una pareja de caballos, luego sotas... En el caso de los duples hay que tener en cuenta que se consideran como dos parejas incluso en el caso de tener cuatro cartas iguales, por lo que gana aquel duples que tenga su primera pareja de valor más alto y en caso de empate el que tenga la segunda pareja más alta. Así: duples de reyes y ases ganan a duples de caballos y caballos y ambos ganan a duples de caballos y sotas.
 
-### Juego
+### 🕸 Juego
 
 Es el cuarto lance del juego. En una primera ronda, cada jugador, empezando por la mano, comunica si tiene juego o no. No se puede mentir en esta comunicación. La "mano" dice "tengo juego" y el resto de jugadores continúan por orden con "sí" o "no". Si sólo una pareja tiene juego (ninguno de los miembros de la otra pareja tiene juego), se pasa directamente a la fase de recuento de puntos. Si ningún jugador tiene juego, se pasa a jugar al **"punto"**.
 
@@ -110,7 +111,7 @@ Si se juega al punto, el valor de las cartas se suma exactamente igual que antes
 
 ---
 
-## Recuento de puntos
+## 🧮 Recuento de puntos
 
 Una vez que se ha jugado toda la mano (los cuatro lances), y en caso de que el juego no se haya terminado antes por un órdago o por haber llegado una pareja a las 40 piedras, se procede a la fase de puntuación o tanteo de los envites pendientes, así como los premios adicionales que pueden tener algunas jugadas.
 
@@ -130,7 +131,7 @@ La fase de recuento al final de cada mano se debe realizar en el mismo orden que
 
 ---
 
-## Glosario
+## 📋 Glosario
 
 - **Mus:**  
   El jugador quiere descartarse de alguna carta o de todas.
