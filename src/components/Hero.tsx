@@ -35,28 +35,6 @@ const Hero = () => {
           Open Mus ®
         </div>
 
-        {/* Social Links */}
-        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <a 
-            href="#" 
-            className="text-white/70 hover:text-white transition-all duration-300 font-light adaptive-nav-links hover:scale-105"
-          >
-            X
-          </a>
-          <a 
-            href="#" 
-            className="text-white/70 hover:text-white transition-all duration-300 font-light adaptive-nav-links hover:scale-105"
-          >
-            Instagram
-          </a>
-          <a 
-            href="#" 
-            className="text-white/70 hover:text-white transition-all duration-300 font-light adaptive-nav-links hover:scale-105"
-          >
-            Github
-          </a>
-        </div>
-
         {/* CTA Button */}
         <CTAButton />
       </nav>

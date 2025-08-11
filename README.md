@@ -1,8 +1,8 @@
 # Open Mus 🎴
 
-A cinematic, minimalist landing page inspired by the classic mus card game. Built with React, TypeScript, Vite, and Tailwind CSS.
+A visually appealing, modern alternative to existing MUS options online. Needs to enhance the UI to make mobile and desktop experience optimal. Objective is to use simple typescript for the whole project and reuse modern components to define the logic. 
 
-Idea, later on is to generate a Playtomic-like style competition to improve pairing logic from existing alternatives.
+Idea, later on is to generate a Playtomic-like style competition to improve pairing logic from existing alternatives. Development is fully planned and executed in ENG, but game only supported in Spanish, not i18n planned for now.
 
 Goal is to improve existing free mus options as: 
 - [https://mus.las40.es/](https://mus.las40.es/)
